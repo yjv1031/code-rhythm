@@ -54,7 +54,6 @@ nav a {
 
 /* Button */
 .btn-primary {
-  width: 100%; /* 부모 요소에 맞게 버튼의 너비 조정 */
   max-width: 200px; /* 최대 너비 설정 */
   display: block;
 }
