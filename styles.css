@@ -20,7 +20,7 @@ body {
 header {
   background-color: #1E1E1E;
   color: white;
-  padding: 1.5rem 2rem; /* 상하 1.5rem, 좌우 2rem */
+  padding: 2rem 2rem; /* 상하 2rem, 좌우 2rem */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -48,9 +48,12 @@ nav a {
   color: inherit;
 }
 
+.header-menu-wrapper {
+  display: none;
+}
+
 /* Button */
 .btn-primary {
-  margin-top: 1.5rem; /* 버튼 위 여백 */
   width: 100%; /* 부모 요소에 맞게 버튼의 너비 조정 */
   max-width: 200px; /* 최대 너비 설정 */
   display: block;
@@ -60,6 +63,7 @@ button.btn-primary {
   background-color: #FF4F4F;
   color: white;
   border: none;
+  position: relative;
   border-radius: 0.3125rem; /* 5px */
   padding: 0.625rem 1.25rem; /* 10px 20px */
   font-size: 1rem; /* 16px */
@@ -82,7 +86,6 @@ button.hamburger-menu {
 
 /* Main */
 main {
-  /*background: linear-gradient(to bottom right, #1E1E1E, #E5E5E5);*/
   background-color: #1E1E1E;
   padding: 3.125rem 0; /* 50px */
   text-align: center;
@@ -168,6 +171,12 @@ button.btn-secondary:hover {
   padding: 3.125rem 0; /* 50px */
 }
 
+.testimonials h2 {
+  margin: auto;
+  text-align: center;
+  padding: 0 0 3rem 0;
+}
+
 .testimonials .logos {
   display: flex;
   justify-content: center;
@@ -221,12 +230,20 @@ footer div a {
   }
 
   /* Header */
-  header button.hamburger-menu {
-    display: block; /* 768px 이하에서는 햄버거 메뉴 버튼 표시 */
+  header nav {
+    display: none; /* 768px 이하에서는 로고를 제외한 나머지 링크 숨김 */
+  }
+  header .btn-primary {
+    display: none; /* 768px 이하에서는 로고를 제외한 나머지 링크 숨김 */
   }
 
   .header-menu-wrapper {
+    display: block; /* 768px 이하에서는 햄버거 메뉴 버튼 표시 */
     position: relative;
+  }
+
+  header button.hamburger-menu {
+    display: block; /* 768px 이하에서는 햄버거 메뉴 버튼 표시 */
   }
 
   .header-menu-container {
